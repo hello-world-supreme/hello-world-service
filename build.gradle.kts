@@ -15,6 +15,7 @@ java.sourceCompatibility = JavaVersion.VERSION_11
 
 repositories {
     mavenCentral()
+    mavenLocal()
 }
 
 dependencies {
@@ -23,6 +24,9 @@ dependencies {
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+    implementation("hu.veres.domokos:exclamation-mark-service:1.0-SNAPSHOT")
+    implementation("org.springframework.boot:spring-boot-starter-webflux")
+    implementation("org.projectreactor:reactor-spring:1.0.1.RELEASE")
     testImplementation("org.springframework.boot:spring-boot-starter-test") {
         exclude(group = "org.junit.vintage", module = "junit-vintage-engine")
     }
